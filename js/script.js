@@ -2,19 +2,22 @@
 document.addEventListener("DOMContentLoaded", function () {
   let wheelDisc = document.querySelector('.wheel__disc-outer');
   let wheelHightlite = document.querySelector('.wheel__hightlite');
-  let sectorOffser = 36;
+  let sectorOffset = 36;
   let sectorSpinTime = 100;
   let prevAngle = 0;
   let currentSector = 0;
+  let sectors = [33, 36]
   document.querySelectorAll('.js-spin').forEach(item => {
     item.addEventListener('click', function () {
       let btn = this
-      let spinSector = getRandomInt(20, 45);
+      let spinSector = sectors[0] || 0;
+      if (spinSector == 0) return
+
       currentSector += spinSector;
+      sectors.splice(0, 1)
 
-      let angle = spinSector * sectorOffser;
+      let angle = spinSector * sectorOffset;
       let spinTime = spinSector * sectorSpinTime;
-
       wheelDisc.style.transitionDuration = spinTime + 'ms';
       wheelDisc.style.transform = 'rotate(' + (prevAngle + angle) + 'deg)';
       wheelHightlite.style.opacity = '0';
@@ -62,9 +65,3 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   //-modal
 });
-
-function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min) + min);
-}

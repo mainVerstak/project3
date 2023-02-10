@@ -486,7 +486,7 @@ body._modal-open {
           align-items: center;
   padding-top: 6%;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 19px;
   line-height: 1.2em;
   text-align: center;
   color: #1E1E1E;
@@ -1149,7 +1149,7 @@ body._modal-open {
     height: 500px;
   }
   .wheel__sector {
-    font-size: 16px;
+    font-size: 15px;
   }
   .wheel__small {
     font-size: 14px;
@@ -1198,7 +1198,7 @@ body._modal-open {
     height: 369px;
   }
   .wheel__sector {
-    font-size: 12px;
+    font-size: 11px;
   }
   .wheel__small {
     font-size: 10px;
