@@ -704,7 +704,7 @@ body._modal-open {
           filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
 }
 .modal-login__note {
-  max-width: 395px;
+  max-width: 410px;
   font-size: 20px;
   text-align: center;
   margin-top: 42px;
@@ -1240,6 +1240,9 @@ body._modal-open {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
+  .modal-login__title {
+    font-size: 30px;
+  }
   .modal-login__text {
     margin-bottom: 16px;
   }
@@ -1248,7 +1251,10 @@ body._modal-open {
     margin-bottom: 10px;
   }
   .modal-login__note {
+    max-width: 286px;
     font-size: 14px;
+    margin-right: auto;
+    margin-left: auto;
   }
   .modal-login__note {
     margin-top: 20px;
